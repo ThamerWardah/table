@@ -92,19 +92,16 @@ const lectureTimes = lectureTime;
         color[available[k]]=colors[k]
       }
     return (
-        <div className="w-full h-full px-6 py-20 ">
-            <div className="bg-green-300 p-1 rounded-md">
-            <div className=" w-full  px-2 h-36">
-            <div className="flex flex-wrap text-sm font-bold">
+        <div className="w-full h-full px-2 py-4 ">
+              <div className=" w-full  px-2 h-32">
+            <div className="flex flex-wrap gap-1 text-sm font-bold">
                     {available2.map((item,index)=><div key={index}>
-                    {!takeItem.includes(item) && !availableCompare.includes(item)&& <button value={item} onClick={(e)=>setTakeItem([...takeItem,e.target.value])} className=" border-2 border-green-300  bg-white rounded-lg px-2 m-1">{item}</button>}
+                    {!takeItem.includes(item) && !availableCompare.includes(item)&& <button value={item} onClick={(e)=>setTakeItem([...takeItem,e.target.value])} className=" border-2 border-green-300  bg-white rounded-lg px-2 ">{item}</button>}
                     </div>)}
             </div> 
             </div>
-            
-                    
-               
-             <div className="bg-white overflow-hidden shadow-lg shadow-black/60 rounded-lg rounded-tl-[80px] ">
+            <div className="bg-green-300 p-1 rounded-md">
+             <div className="bg-white overflow-hidden shadow-lg shadow-black/60 rounded-lg rounded-tl-[80px] p-1 text-xs">
                
                 <div className="w-20 h-20 rounded-full relative bg-gray-100 shadow-md shadow-green-500 flex justify-center items-center overflow-hidden">
                 <h1 className="text-2xl font-bold z-10">{numberOfUnit?numberOfUnit:0}</h1>
@@ -114,12 +111,12 @@ const lectureTimes = lectureTime;
 
                 <div className="grid grid-rows-5 grid-cols-6">
                     {newTable.map((item,index)=><div key={index}>
-                        <div className="my-4 text-center">
+                        <div className="my-2 text-center">
                             <h1 className="font-bold bg-gray-100">
                                  {lectureTimes[index]}
                             </h1>
-                            <h1 className={`text-sm text_shadow py-2 font-bold ${newTable[index][secondStep[index]]?color[newTable[index][secondStep[index]]]:"bg-gray-100"}`}>
-                                {newTable[index][secondStep[index]]?newTable[index][secondStep[index]]:<p className="text-red-600">_ _ _ _ _ </p>}
+                            <h1 className={`text-xs text_shadow py-2 font-bold ${newTable[index][secondStep[index]]?color[newTable[index][secondStep[index]]]:"bg-gray-100"}`}>
+                                {newTable[index][secondStep[index]]?newTable[index][secondStep[index]]:<p className="text-red-600">_ _ _  </p>}
                             </h1>
                         </div>
 
@@ -130,8 +127,8 @@ const lectureTimes = lectureTime;
             </div>
                              
 
-            <div className="flex flex-wrap h-32 mt-2">{takeItem.map((item,index)=><div key={index}>
-            { <button value={item} onClick={(e)=>handleRemove(e.target.value)} className=" border-2 border-blue-500  bg-white rounded-full px-4 m-1">{item}</button>}
+            <div className="flex flex-wrap  mt-4 text-sm font-bold gap-2">{takeItem.map((item,index)=><div key={index}>
+            { <button value={item} onClick={(e)=>handleRemove(e.target.value)} className=" border-2 border-blue-500  bg-white rounded-full px-2">{item}</button>}
             </div>)}</div>
 
         </div>

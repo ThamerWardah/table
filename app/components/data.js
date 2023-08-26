@@ -1,0 +1,136 @@
+ const colors = ['bg-green-100','bg-slate-300','bg-red-300','bg-purple-400','bg-yellow-300','bg-orange-400','bg-teal-300','bg-amber-400','bg-indigo-400','bg-pink-500','bg-lime-200','bg-blue-300','bg-emerald-200','bg-cyan-300','bg-sky-500','bg-violet-400','bg-fuchsia-400','bg-rose-400','bg-white','bg-red-200','bg-slate-400','bg-blue-200','bg-rose-500','bg-green-100','bg-slate-300','bg-red-300','bg-purple-400','bg-yellow-300','bg-orange-400','bg-teal-300','bg-amber-400','bg-indigo-400','bg-pink-500','bg-lime-200','bg-blue-300','bg-emerald-200','bg-cyan-300','bg-sky-500','bg-violet-400','bg-fuchsia-400','bg-rose-400','bg-white','bg-red-200','bg-slate-400','bg-blue-200','bg-rose-500'];
+
+
+ 
+ const Items = {
+    M101:{name:'M101',significant:3, class:3, lab:0, pre:'none',level:1},
+    M102:{name:'M102',significant:3, class:3, lab:0, pre:'M101', level:1},
+    M103:{name:'M103',significant:3, class:3, lab:0, pre:'none', level:1},
+    M104:{name:'M104',significant:3, class:3, lab:0, pre:'M103', level:1},
+    M107:{name:'M107',significant:4, class:4, lab:0, pre:'none', level:1},
+    M201:{name:'M201',significant:4, class:4, lab:0, pre:'M102', level:2},
+    M211:{name:'M211',significant:3, class:3, lab:0, pre:'M107', level:2},
+    M212:{name:'M212',significant:3, class:3, lab:0, pre:'M211', level:2},
+    M213:{name:'M213',significant:3, class:3, lab:0, pre:'none', level:2},
+    M214:{name:'M214',significant:3, class:3, lab:0, pre:'M102', level:2},
+    M215:{name:'M215',significant:3, class:3, lab:0, pre:'M101', level:2},
+    M216:{name:'M216',significant:3, class:3, lab:0, pre:'M215', level:2},
+    M331:{name:'M331',significant:3, class:3, lab:0, pre:'M201', level:3},
+    M332:{name:'M332',significant:3, class:3, lab:0, pre:'M331', level:3},
+    M333:{name:'M333',significant:3, class:3, lab:0, pre:'M104', level:3},
+    M334:{name:'M334',significant:3, class:3, lab:0, pre:'M216', level:3},
+    M335:{name:'M335',significant:4, class:3, lab:1, pre:'M201', level:3},
+    M336:{name:'M336',significant:3, class:3, lab:0, pre:'M214', level:3},
+    M337:{name:'M337',significant:3, class:3, lab:0, pre:'none', level:3},
+    M339:{name:'M339',significant:3, class:3, lab:0, pre:'M333', level:3},
+    M431:{name:'M431',significant:3, class:3, lab:0, pre:'none', level:4},
+    M433:{name:'M433',significant:3, class:3, lab:0, pre:'none', level:4},
+    M450:{name:'M450',significant:2, class:0, lab:0, pre:'none', level:4},
+    M219:{name:'M219',significant:3, class:3, lab:0, pre:'none', level:2},
+    M221:{name:'M221',significant:3, class:3, lab:0, pre:'none', level:2},
+    M338:{name:'M338',significant:3, class:3, lab:0, pre:'none', level:3},
+    M432:{name:'M432',significant:3, class:3, lab:0, pre:'M431', level:4},
+    M434:{name:'M434',significant:3, class:3, lab:0, pre:'M433', level:4},
+    M435:{name:'M435',significant:3, class:3, lab:0, pre:'none', level:4},
+    M436:{name:'M436',significant:3, class:3, lab:0, pre:'none', level:4},
+    M437:{name:'M437',significant:3, class:3, lab:0, pre:'none', level:4},
+    M441:{name:'M441',significant:3, class:3, lab:0, pre:'none', level:4},
+    M443:{name:'M443',significant:3, class:3, lab:0, pre:'none', level:4},
+    C125:{name:'C125',significant:2, class:1, lab:3, pre:'none', level:1},
+    C226:{name:'C226',significant:2, class:1, lab:3, pre:'none', level:2},
+    C107:{name:'C107',significant:2, class:2, lab:0, pre:'none', level:1},
+    C260:{name:'C260',significant:3, class:2, lab:3, pre:'none', level:2},
+    C360:{name:'C360',significant:2, class:2, lab:0, pre:'none', level:3},
+    C460:{name:'C460',significant:2, class:2, lab:0, pre:'none', level:4},
+    C419:{name:'C419',significant:1, class:1, lab:0, pre:'none', level:4},
+    
+    
+  }
+  
+  
+
+   const Items2 = [
+    {name:'M101',significant:3, class:3, lab:0, pre:'none',level:1},
+    {name:'M102',significant:3, class:3, lab:0, pre:'M101', level:1},
+    {name:'M103',significant:3, class:3, lab:0, pre:'none', level:1},
+    {name:'M104',significant:3, class:3, lab:0, pre:'M103', level:1},
+    {name:'M107',significant:4, class:4, lab:0, pre:'none', level:1},
+    {name:'M201',significant:4, class:4, lab:0, pre:'M102', level:2},
+    {name:'M211',significant:3, class:3, lab:0, pre:'M107', level:2},
+    {name:'M212',significant:3, class:3, lab:0, pre:'M211', level:2},
+    {name:'M213',significant:3, class:3, lab:0, pre:'none', level:2},
+    {name:'M214',significant:3, class:3, lab:0, pre:'M102', level:2},
+    {name:'M215',significant:3, class:3, lab:0, pre:'M101', level:2},
+    {name:'M216',significant:3, class:3, lab:0, pre:'M215', level:2},
+    {name:'M331',significant:3, class:3, lab:0, pre:'M201', level:3},
+    {name:'M332',significant:3, class:3, lab:0, pre:'M331', level:3},
+    {name:'M333',significant:3, class:3, lab:0, pre:'M104', level:3},
+    {name:'M334',significant:3, class:3, lab:0, pre:'M216', level:3},
+    {name:'M335',significant:4, class:3, lab:1, pre:'M201', level:3},
+    {name:'M336',significant:3, class:3, lab:0, pre:'M214', level:3},
+    {name:'M337',significant:3, class:3, lab:0, pre:'none', level:3},
+    {name:'M339',significant:3, class:3, lab:0, pre:'M333', level:3},
+    {name:'M431',significant:3, class:3, lab:0, pre:'none', level:4},
+    {name:'M433',significant:3, class:3, lab:0, pre:'none', level:4},
+    {name:'M450',significant:2, class:0, lab:0, pre:'none', level:4},
+    {name:'M219',significant:3, class:3, lab:0, pre:'none', level:2},
+    {name:'M221',significant:3, class:3, lab:0, pre:'none', level:2},
+    {name:'M338',significant:3, class:3, lab:0, pre:'none', level:3},
+    {name:'M432',significant:3, class:3, lab:0, pre:'M431', level:4},
+    {name:'M434',significant:3, class:3, lab:0, pre:'M433', level:4},
+    {name:'M435',significant:3, class:3, lab:0, pre:'none', level:4},
+    {name:'M436',significant:3, class:3, lab:0, pre:'none', level:4},
+    {name:'M437',significant:3, class:3, lab:0, pre:'none', level:4},
+    {name:'M441',significant:3, class:3, lab:0, pre:'none', level:4},
+    {name:'M443',significant:3, class:3, lab:0, pre:'none', level:4},
+    {name:'C125',significant:2, class:1, lab:3, pre:'none', level:1},
+    {name:'C226',significant:2, class:1, lab:3, pre:'none', level:2},
+    {name:'C107',significant:2, class:2, lab:0, pre:'none', level:1},
+    {name:'C260',significant:3, class:2, lab:3, pre:'none', level:2},
+    {name:'C360',significant:2, class:2, lab:0, pre:'none', level:3},
+    {name:'C460',significant:2, class:2, lab:0, pre:'none', level:4},
+    {name:'C419',significant:1, class:1, lab:0, pre:'none', level:4},
+  ];
+
+  const table = [ 
+   ['M201_A','M211','M219'],
+   ['M201_A','M211','M219'],
+   ['M214','C260','M201_B'],
+   ['M214','C260','M201_B'],
+   ['C107'],
+   ['C107'],
+   ['C260','M201_A'],
+   ['C260','M201_A'],
+   [],
+   [],
+   ['M211','M215'],
+   ['M211','M215'],
+   ['M215'],
+   ['M215'],
+   ['C107','M201_B'],
+   ['C107','M201_B'],
+   ['M214'],
+   ['M214'],
+   ['M221'],
+   ['M221'],
+   ['C125_A'],
+   ['C125_A'],
+   ['C125_B'],
+   ['C125_B'],
+   ['C125_A'],
+   ['C125_A'],
+   [],
+   [],
+   ['M221','C125_B'],
+   ['M221','C125_B'],
+     
+       
+];
+
+
+const lectureTime = ['8:30','9:30','10:30','11:30','12:30','1:30', '8:30','9:30','10:30','11:30','12:30','1:30','8:30','9:30','10:30','11:30','12:30','1:30','8:30','9:30','10:30','11:30','12:30','1:30','8:30','9:30','10:30','11:30','12:30','1:30',]
+
+
+  const student =   {name:'Hussien',id:1,finished:['M101','M102','M103','M104','M104','M107']}
+
+  export {Items , Items2 , student , table , lectureTime , colors}

@@ -9,7 +9,7 @@ import { colors } from "@/app/components/data";
 
 
 
-export default function (){
+export default function Table(){
 const lectureTimes = lectureTime;
   const [takeItem,setTakeItem] = useState([]);
   
